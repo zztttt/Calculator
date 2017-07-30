@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script type="text/javascript" src="cal.js"></script>
+    <style type="text/css" >
+        *{
+            margin:0;
+            padding:0
+        ;}
+        table {
+            border:0;
+            height:350px;
+            width:280px;
+            font-family:"Times New Roman";
+            font-size:20px;
+            border-collapse:collapse;
+        }
+        tr,td {
+            text_align:center;
+            border:1px solid ;
+            padding:3px;
+        }
+        .Screen{
+            height:40px;
+            width:280px;
+        }
+        .button{
+            height:45px;
+            width:65px;
+            font_size:60px;
+
+            background: #DBECF4;
+        }
+        .blue {
+            background:#DBECF4;
+        }
+        tr:hover th{
+            color:#000;;
+        }
+    </style>
+</head>
+<body background="#ffffff">
+<table>
+    <tr><td>Calculator</td></tr>
+    <tr class="blue">
+        <td colspan="2">
+            <input type="text"class="Screen" id="screen">
+        </td>
+    </tr>
+    <tr >
+        <td>
+            <input type="button" class="button" value="(" id="left" onclick="Click('(')">
+            <input type="button" class="button" value=")" id="right" onclick="Click(')')">
+            <input type="button" class="button" value="←" id="delete" onclick="del()">
+            <input type="button" class="button" value="/" id="divise" onclick="Click('/')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button" value="7" id="seven" onclick="Click(7)">
+            <input type="button" class="button" value="8" id="eight" onclick="Click(8)">
+            <input type="button" class="button" value="9" id="nine" onclick="Click(9)">
+            <input type="button" class="button" value="*" id="multiply" onclick="Click('*')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button" value="4" id="four" onclick="Click(4)">
+            <input type="button" class="button" value="5" id="five" onclick="Click(5)">
+            <input type="button" class="button" value="6" id="six" onclick="Click(6)">
+            <input type="button" class="button" value="-" id="minus" onclick="Click('-')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button" value="1" id="one" onclick="Click(1)">
+            <input type="button" class="button" value="2" id="two" onclick="Click(2)">
+            <input type="button" class="button" value="3" id="three" onclick="Click(3)">
+            <input type="button" class="button" value="+" id="plus" onclick="Click('+')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button" value="." id="point" onclick="Click('.')">
+            <input type="button" class="button" value="0" id="zero" onclick="Click(0)">
+            <input type="button" class="button" value="C" id="clear" onclick="clearall()">
+            <input type="button" class="button" value="=" id="equal" onclick="get_result()">
+        </td>
+    </tr>
+</table>
+</body>
+</html>
